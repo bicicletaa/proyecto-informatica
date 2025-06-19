@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kiosko Otto Krause</title>
+    <style>
+        body {
+            font-family: Arial;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .producto {
+            border: 1px solid #FF0000;
+            padding: 10px;
+            margin: 5px;
+            display: inline-block;
+            width: 120px;
+            text-align: center;
+            cursor: pointer;
+        }
+        #carrito {
+            margin-top: 20px;
+            border-top: 2px solid #FF0000;
+            padding-top: 10px;
+        }
+        #total {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        button {
+            background: #FF0000;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="color:#FF0000;">productos</h2>
+
+<div>
+    <div class="producto" onclick="agregar('pancho', 1600)">
+        pancho<br>$1600
+    </div>
+    <div class="producto" onclick="agregar('Papas', 2500)">
+        Papas<br>$2500
+    </div>
+    <div class="producto" onclick="agregar('manaos lata', 1000)">
+        manaos lata<br>$1000
+    </div>
+</div>
+
+<div id="carrito">
+    <h3>Tu Pedido:</h3>
+    <div id="items"></div>
+    <div id="total">Total: $0</div>
+</div>
+
+<button onclick="pagar()">PAGAR</button>
+
+
+</body>
+</html>
